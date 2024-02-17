@@ -5,10 +5,10 @@ pip install eth_account
 pip install web3
 ````
 Run:  <br />
+example out going (for sender) transaction hash. use your own <br />
 ````shell
 $ python get_publicKey_from_transaction.py 0xa3f72e2413bdfc1470f78bfebf1360216e26834d8f7b37ed3e6daf0c9def2f45
 ````
-example out going (for sender) transaction hash. use your own <br />
 Result: <br />
 ````shell
 connection is:  True
