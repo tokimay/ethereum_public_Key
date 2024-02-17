@@ -21,9 +21,9 @@ r = (tx.r).hex()
 s = (tx.s).hex()
 v = (to_standard_v(extract_chain_id(tx.v)[1]))
 
-print('r: ', r, type(r))
-print('s: ', s, type(s))
-print('v: ', v, type(v))
+print('r: ', r)
+print('s: ', s)
+print('v: ', v)
 
 sg = w3.eth.account._keys.Signature(vrs=(v, int(r, 16), int(s, 16)))
 
@@ -33,5 +33,5 @@ ut = serializable_unsigned_transaction_from_dict(tt)
 recover_public_address = sg.recover_public_key_from_msg_hash(ut.hash())
 recover_address = sg.recover_public_key_from_msg_hash(ut.hash()).to_checksum_address()
 
-print('recover_public_address: ', recover_public_address.to_hex(), 'type: ', type(recover_public_address.to_hex()))
-print('recover_address       : ', recover_address, 'type: ', type(recover_address))
+print('recover_public_address: ', recover_public_address.to_hex(), 'type: ')
+print('recover_address       : ', recover_address, 'type: ')
