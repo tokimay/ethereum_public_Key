@@ -33,5 +33,5 @@ ut = serializable_unsigned_transaction_from_dict(tt)
 recover_public_address = sg.recover_public_key_from_msg_hash(ut.hash())
 recover_address = sg.recover_public_key_from_msg_hash(ut.hash()).to_checksum_address()
 
-print('recover_public_address: ', recover_public_address.to_hex(), 'type: ')
-print('recover_address       : ', recover_address, 'type: ')
+print('recover_public_address: ', recover_public_address.to_hex())
+print('recover_address       : ', recover_address)
