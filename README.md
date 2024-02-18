@@ -1,4 +1,4 @@
-Install requeriment: <br />
+Install requirement: <br />
 ````shell
 $ pip install eth_account
 $ pip install web3
