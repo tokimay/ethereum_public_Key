@@ -14,6 +14,9 @@ else:
 w3 = web3.Web3(web3.HTTPProvider('https://nodes.mewapi.io/rpc/eth'))
 # Check Connection
 t = w3.is_connected()
+if not t:
+    print('Check internet connection or change HTTPProvider in source code')
+    exit(1)
 print('connection is: ', t)
 
 tx = w3.eth.get_transaction(my_transaction_hash)
@@ -33,5 +36,5 @@ ut = serializable_unsigned_transaction_from_dict(tt)
 recover_public_address = sg.recover_public_key_from_msg_hash(ut.hash())
 recover_address = sg.recover_public_key_from_msg_hash(ut.hash()).to_checksum_address()
 
-print('recover_public_address: ', recover_public_address.to_hex())
-print('recover_address       : ', recover_address)
+print('recovered_public_key: ', recover_public_address.to_hex())
+print('recovered_address   : ', recover_address)
