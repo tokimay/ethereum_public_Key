@@ -11,7 +11,7 @@ else:
     exit(1)
 
 
-w3 = web3.Web3(web3.HTTPProvider('https://nodes.mewapi.io/rpc/eth'))
+w3 = web3.Web3(web3.HTTPProvider('https://rpc.eth.gateway.fm'))
 # Check Connection
 t = w3.is_connected()
 if not t:
